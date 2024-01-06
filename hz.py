@@ -1,9 +1,17 @@
-#Создайте функцию, которая принимает на вход список строк и возвращает новый список, содержащий только строки, состоящие из букв верхнего регистра.
-def vr(list):
-    words=[]
-    for i in list:
-        if i.isupper():
-            words.append(i)
-    return words        
-words2= input()
-print(vr(words2))
+#Создайте функцию, которая принимает на вход два списка чисел и возвращает новый список, содержащий только общие элементы этих списков.
+def spisok(r1, r2):
+    r1 = list(r1)
+    r2 = list(r2)
+    obs = {}
+    for char_1 in r1:
+        for char_2 in r2:
+            if char_1 == char_2:
+                obs.get(char_1)
+    return obs
+
+
+
+r = input("Write words:  ")
+m = input("Write words:  ")
+otvet = spisok(r, m)
+print(f"Общие элементы: {otvet} ")
